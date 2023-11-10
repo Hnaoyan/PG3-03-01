@@ -7,8 +7,8 @@ GameManager::GameManager()
 {
 	// 各シーンの配列
 	sceneArr_[TITLE] = std::make_unique<TitleScene>();
-	//sceneArr_[STAGE] = std::make_unique<StageScene>();
-	//sceneArr_[CLEAR] = std::make_unique<ClearScene>();
+	sceneArr_[STAGE] = std::make_unique<StageScene>();
+	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
 
 	// 初期シーンの設定
 	currentSceneNo_ = TITLE;

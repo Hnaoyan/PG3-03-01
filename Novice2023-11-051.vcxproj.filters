@@ -20,11 +20,17 @@
     <Filter Include="KamataEngine\ソースファイル">
       <UniqueIdentifier>{c3c89ea0-853b-4c8e-8679-e3ba0364ccfd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="KamataEngine\ヘッダーファイル\シーン">
+    <Filter Include="KamataEngine\ヘッダーファイル\Player">
+      <UniqueIdentifier>{2e63022f-5cbf-48ab-a8d9-a539b792c5d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ヘッダーファイル\Scene">
       <UniqueIdentifier>{e4b98053-08a3-4df4-8b80-bb4d727f3e2e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="KamataEngine\ソースファイル\シーン">
+    <Filter Include="KamataEngine\ソースファイル\Scene">
       <UniqueIdentifier>{5bb3d0f3-15c6-4ab7-9f4d-f4bb35a13fda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ソースファイル\Player">
+      <UniqueIdentifier>{f66126ff-9a5e-40d5-b0f4-d6f549cab2d6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -53,20 +59,29 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>KamataEngine\ソースファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>KamataEngine\ソースファイル</Filter>
-    </ClCompile>
     <ClCompile Include="IScene.cpp">
-      <Filter>KamataEngine\ソースファイル\シーン</Filter>
+      <Filter>KamataEngine\ソースファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="TitleScene.cpp">
-      <Filter>KamataEngine\ソースファイル\シーン</Filter>
+      <Filter>KamataEngine\ソースファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="StageScene.cpp">
-      <Filter>KamataEngine\ソースファイル\シーン</Filter>
+      <Filter>KamataEngine\ソースファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="ClearScene.cpp">
-      <Filter>KamataEngine\ソースファイル\シーン</Filter>
+      <Filter>KamataEngine\ソースファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>KamataEngine\ソースファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>KamataEngine\ソースファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -144,23 +159,27 @@
     <ClInclude Include="GameManager.h">
       <Filter>KamataEngine\ヘッダーファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>KamataEngine\ヘッダーファイル</Filter>
-    </ClInclude>
     <ClInclude Include="TitleScene.h">
-      <Filter>KamataEngine\ヘッダーファイル\シーン</Filter>
+      <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="IScene.h">
-      <Filter>KamataEngine\ヘッダーファイル\シーン</Filter>
+      <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="InputKey.h">
       <Filter>KamataEngine\ヘッダーファイル</Filter>
     </ClInclude>
     <ClInclude Include="StageScene.h">
-      <Filter>KamataEngine\ヘッダーファイル\シーン</Filter>
+      <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="ClearScene.h">
-      <Filter>KamataEngine\ヘッダーファイル\シーン</Filter>
+      <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>KamataEngine\ヘッダーファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>KamataEngine\ヘッダーファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿#include "TitleScene.h"
+#include "InputKey.h"
 
 #include <Novice.h>
 
@@ -8,9 +9,9 @@ void TitleScene::Init()
 
 void TitleScene::Update()
 {
-	//if (InputKey::IsTrigger(DIK_SPACE)) {
-	//	sceneNo = STAGE;
-	//}
+	if (InputKey::IsTrigger(DIK_SPACE)) {
+		sceneNo = STAGE;
+	}
 }
 
 void TitleScene::Draw()

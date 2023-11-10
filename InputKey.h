@@ -9,24 +9,10 @@ private:
 	static char preKeys[256];
 	
 public:
-	static void Input() {
-		// キー入力を受け取る
-		memcpy(preKeys, keys, 256);
-		Novice::GetHitKeyStateAll(keys);
-	}
+	static void Input();
 
-	static bool IsPress(char keyNumber)
-	{
-		return keys[keyNumber];
-	}
+	static bool IsPress(char keyNumber);
 
-	static bool IsTrigger(char keyNumber)
-	{
-		return !preKeys[keyNumber] && keys[keyNumber];
-	}
+	static bool IsTrigger(char keyNumber);
 
 };
-
-char InputKey::keys[256] = { 0 };
-
-char InputKey::preKeys[256] = { 0 };
