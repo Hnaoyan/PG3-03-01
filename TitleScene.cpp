@@ -16,7 +16,6 @@ void TitleScene::Update()
 
 void TitleScene::Draw()
 {
-
-	Novice::DrawEllipse(int(1280 / 2), int(720 / 2), 30, 30, 0.0f, WHITE, kFillModeSolid);
+	Novice::DrawBox(int((1280/2)-100),int((720/2)-100),200,200,0.0f,WHITE,kFillModeSolid);
 
 }

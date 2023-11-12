@@ -12,7 +12,7 @@ void Player::Init()
 
 void Player::Setting()
 {
-	workFire_.kFireRate_ = 15;
+	workFire_.kFireRate_ = 10;
 
 }
 
@@ -63,7 +63,6 @@ void Player::Movement()
 
 void Player::Fire()
 {
-
 	if (InputKey::IsPress(DIK_SPACE)) {
 		workFire_.coolTimer_++;
 		if (workFire_.coolTimer_ >= workFire_.kFireRate_) {
@@ -71,7 +70,6 @@ void Player::Fire()
 			workFire_.coolTimer_ = 0;
 		}
 	}
-
 }
 
 void Player::BulletUpdate()
