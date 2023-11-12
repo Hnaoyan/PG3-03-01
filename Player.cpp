@@ -7,6 +7,7 @@ void Player::Init()
 {
 	position_ = { 1280.0f / 2.0f,720.0f / 2.0f };
 	radius_ = 20.0f;
+	SetRadius(radius_);
 	Setting();
 }
 
@@ -38,6 +39,10 @@ void Player::Draw()
 	// 円の描画
 	Novice::DrawEllipse(int(position_.x), int(position_.y), int(radius_), int(radius_), 0.0f, 0x00FF00DD, kFillModeSolid);
 
+}
+
+void Player::OnCollision()
+{
 }
 
 void Player::Movement()
@@ -80,9 +85,7 @@ void Player::BulletUpdate()
 			delete bullet;
 			return true;
 		}
-		else {
-			return false;
-		}
+		return false;
 	});
 
 	// 更新処理

@@ -10,6 +10,7 @@ void PlayerBullet::Init(Vector2& position, Vector2& velocity)
 	velocity_ = velocity;
 	// サイズ
 	radius_ = kBulletRadius;
+	SetRadius(radius_);
 }
 
 void PlayerBullet::Update()
@@ -42,4 +43,9 @@ void PlayerBullet::Draw()
 
 	Novice::DrawEllipse(int(position_.x), int(position_.y), int(radius_), int(radius_), 0.0f, BLACK, kFillModeSolid);
 
+}
+
+void PlayerBullet::OnCollision()
+{
+	isDead_ = true;
 }

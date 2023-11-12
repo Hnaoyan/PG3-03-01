@@ -1,7 +1,8 @@
 ﻿#pragma once
 #include <Vector2.h>
+#include "Collider.h"
 
-class PlayerBullet
+class PlayerBullet : public Collider
 {
 public:
 	/// <summary>
@@ -16,6 +17,10 @@ public:
 	/// 描画
 	/// </summary>
 	void Draw();
+	/// <summary>
+	/// コールバック
+	/// </summary>
+	void OnCollision() override;
 
 private:
 	Vector2 position_;
@@ -27,11 +32,8 @@ private:
 
 public: // アクセッサ
 	// 座標
-	Vector2 GetPostion() { return position_; }
-	void SetPosition(Vector2& position) { position_ = position; }
-	// サイズ
-	float GetRadius() { return radius_; }
-	void SetRadius(float radius) { radius_ = radius; }	
+	Vector2 GetPosition() override { return position_; }
+
 	// 死亡フラグ
 	bool GetIsDead() { return isDead_; }
 	void SetIsDead(bool isDead) { isDead_ = isDead; }

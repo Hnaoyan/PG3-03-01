@@ -80,8 +80,11 @@
     <ClCompile Include="PlayerBullet.cpp">
       <Filter>KamataEngine\ソースファイル\Player</Filter>
     </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>KamataEngine\ソースファイル</Filter>
+    </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\ソースファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +183,11 @@
     <ClInclude Include="PlayerBullet.h">
       <Filter>KamataEngine\ヘッダーファイル\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Collider.h">
+      <Filter>KamataEngine\ヘッダーファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>KamataEngine\ヘッダーファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

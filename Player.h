@@ -1,11 +1,12 @@
 ﻿#pragma once
 #include "Vector2.h"
 #include "PlayerBullet.h"
+#include "Collider.h"
 
 #include <stdint.h>
 #include <list>
 
-class Player
+class Player : public Collider
 {
 public:
 	/// <summary>
@@ -24,6 +25,11 @@ public:
 	/// 描画
 	/// </summary>
 	void Draw();
+	/// <summary>
+	/// コールバック
+	/// </summary>
+	void OnCollision() override;
+
 
 private:
 	/// <summary>
@@ -54,9 +60,17 @@ private:
 	// サイズ
 	float radius_ = {};
 
-public:
-	Vector2 GetPostion() { return position_; }
-	float GetRadius() { return radius_; }
+public: // アクセッサ
+	/// <summary>
+	/// 座標取得
+	/// </summary>
+	/// <returns></returns>
+	Vector2 GetPosition() override { return position_; }
+	/// <summary>
+	/// リストの取得
+	/// </summary>
+	/// <returns></returns>
+	const std::list<PlayerBullet*>& GetBulletList() { return bullets_; }
 
 private:
 	struct WorkFire {
