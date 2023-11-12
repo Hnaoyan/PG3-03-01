@@ -16,6 +16,6 @@ void TitleScene::Update()
 
 void TitleScene::Draw()
 {
+	Novice::ScreenPrintf(0, 0, "Title");
 	Novice::DrawBox(int((1280/2)-100),int((720/2)-100),200,200,0.0f,WHITE,kFillModeSolid);
-
 }

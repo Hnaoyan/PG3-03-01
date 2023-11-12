@@ -1,4 +1,5 @@
 ﻿#include "StageScene.h"
+#include "Novice.h"
 #include "ImGuiManager.h"
 
 void StageScene::Init()
@@ -21,15 +22,12 @@ void StageScene::Update()
 	// 当たり判定
 	CheckAllCollision();
 
-	ImGui::Begin("enemy");
-	ImGui::Text("pos.x : %.2f pos.y : %.2f", enemy_->GetPosition().x, enemy_->GetPosition().y);
-	ImGui::Text("rad : %.2f", enemy_->GetRadius());
-	ImGui::Text("isDead : %d", enemy_->GetDead());
-	ImGui::End();
 }
 
 void StageScene::Draw()
 {
+	Novice::ScreenPrintf(0, 0, "Game");
+
 	// 描画
 	player_->Draw();
 	enemy_->Draw();
