@@ -1,30 +1,11 @@
 ﻿#pragma once
 #include <Vector2.h>
 #include <stdint.h>
+
+#include "EnemyState.h"
 #include "Collider.h"
 
-class Enemy;
-
-class EnemyBaseState {
-protected:
-	Enemy* enemy_ = nullptr;
-public:
-	virtual void SetEnemy(Enemy* enemy) { enemy_ = enemy; }
-	virtual void Update() {};
-};
-
-class EnemyStopState : public EnemyBaseState {
-public:
-	void Update();
-};
-
-class EnemyMoveState : public EnemyBaseState {
-public:
-	EnemyMoveState();
-	void Update();
-private:
-	bool isMoveLeft_ = false;
-};
+class EnemyState;
 
 class Enemy : public Collider
 {
@@ -49,14 +30,14 @@ public:
 	/// ステート変更
 	/// </summary>
 	/// <param name="state"></param>
-	void ChangeState(EnemyBaseState* state);
+	void ChangeState(EnemyState* state);
 	/// <summary>
 	/// 移動処理
 	/// </summary>
 	/// <param name="moveVector"></param>
 	void MoveUpdate(Vector2& moveVector);
 private:
-	EnemyBaseState* state_ = nullptr;
+	EnemyState* state_ = nullptr;
 
 	Vector2 position_ = {};
 	float radius_ = {};

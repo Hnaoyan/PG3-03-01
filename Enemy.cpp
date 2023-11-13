@@ -38,7 +38,7 @@ void Enemy::OnCollision()
 	colorCode_ = RED;
 }
 
-void Enemy::ChangeState(EnemyBaseState* state)
+void Enemy::ChangeState(EnemyState* state)
 {
 	state_ = state;
 	state_->SetEnemy(this);

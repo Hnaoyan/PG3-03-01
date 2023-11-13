@@ -32,6 +32,9 @@
     <Filter Include="KamataEngine\ソースファイル\Player">
       <UniqueIdentifier>{f66126ff-9a5e-40d5-b0f4-d6f549cab2d6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\ヘッダーファイル\Enemy">
+      <UniqueIdentifier>{6185ba2b-5f99-44db-b4ca-f8161fe4ba7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>KamataEngine\ソースファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyState.cpp">
+      <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -186,8 +192,11 @@
     <ClInclude Include="Collider.h">
       <Filter>KamataEngine\ヘッダーファイル</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyState.h">
+      <Filter>KamataEngine\ヘッダーファイル\Enemy</Filter>
+    </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>KamataEngine\ヘッダーファイル</Filter>
+      <Filter>KamataEngine\ヘッダーファイル\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
