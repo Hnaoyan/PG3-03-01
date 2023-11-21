@@ -30,6 +30,9 @@ public:
 	/// </summary>
 	void OnCollision() override;
 
+	void MoveRight();
+	void MoveLeft();
+
 
 private:
 	/// <summary>

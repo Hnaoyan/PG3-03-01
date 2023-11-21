@@ -45,6 +45,20 @@ void Player::OnCollision()
 {
 }
 
+void Player::MoveRight()
+{
+	float speed = 4.0f;
+	velocity_.x += speed;
+	position_.x += velocity_.x;
+}
+
+void Player::MoveLeft()
+{
+	float speed = 4.0f;
+	velocity_.x -= speed;
+	position_.x += velocity_.x;
+}
+
 void Player::Movement()
 {
 	float speed = 4.0f;
@@ -57,12 +71,12 @@ void Player::Movement()
 		velocity_.y += speed;
 	}
 
-	if (InputKey::IsPress(DIK_A)) {
-		velocity_.x -= speed;
-	}
-	else if (InputKey::IsPress(DIK_D)) {
-		velocity_.x += speed;
-	}
+	//if (InputKey::IsPress(DIK_A)) {
+	//	velocity_.x -= speed;
+	//}
+	//else if (InputKey::IsPress(DIK_D)) {
+	//	velocity_.x += speed;
+	//}
 
 }
 

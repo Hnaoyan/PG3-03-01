@@ -3,6 +3,8 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Collider.h"
+#include "InputHandler.h"
+#include "ICommand.h"
 
 #include <memory>
 
@@ -21,5 +23,9 @@ public:
 private:
 	std::unique_ptr<Player> player_;
 	std::unique_ptr<Enemy> enemy_;
+
+	std::unique_ptr<InputHandler> inputHandler_;
+	ICommand* command_ = nullptr;
+
 };
 

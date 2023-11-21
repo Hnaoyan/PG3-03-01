@@ -8,10 +8,21 @@ void StageScene::Init()
 	player_->Init();
 	enemy_ = std::make_unique<Enemy>();
 	enemy_->Init();
+
+	inputHandler_ = std::make_unique<InputHandler>();
+	inputHandler_->AssignMoveLeftCommand2PressKeyA();
+	inputHandler_->AssignMoveRightCommand2PressKeyD();
+
 }
 
 void StageScene::Update()
 {
+	command_ = inputHandler_.get()->HandleInput();
+
+	if (this->command_) {
+		command_->Exec(*player_);
+	}
+
 	// 更新
 	player_->Update();
 	enemy_->Update();
