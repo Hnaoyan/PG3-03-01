@@ -20,7 +20,8 @@ void Player::Setting()
 void Player::Update()
 {
 	// 移動入力
-	Movement();
+	velocity_ = {};
+	//Movement();
 	// 射撃処理
 	Fire();
 	// 弾の処理
@@ -59,17 +60,31 @@ void Player::MoveLeft()
 	position_.x += velocity_.x;
 }
 
-void Player::Movement()
+void Player::MoveUp()
 {
 	float speed = 4.0f;
-	velocity_ = {};
+	velocity_.y -= speed;
+	position_.y += velocity_.y;
+}
 
-	if (InputKey::IsPress(DIK_W)) {
-		velocity_.y -= speed;
-	}
-	else if (InputKey::IsPress(DIK_S)) {
-		velocity_.y += speed;
-	}
+void Player::MoveDown()
+{
+	float speed = 4.0f;
+	velocity_.y += speed;
+	position_.y += velocity_.y;
+}
+
+void Player::Movement()
+{
+	//float speed = 4.0f;
+	//velocity_ = {};
+
+	//if (InputKey::IsPress(DIK_W)) {
+	//	velocity_.y -= speed;
+	//}
+	//else if (InputKey::IsPress(DIK_S)) {
+	//	velocity_.y += speed;
+	//}
 
 	//if (InputKey::IsPress(DIK_A)) {
 	//	velocity_.x -= speed;

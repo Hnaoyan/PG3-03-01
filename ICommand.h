@@ -21,3 +21,13 @@ class MoveLeftCommand : public ICommand {
 public:
 	void Exec(Player& player) override;
 };
+
+class MoveUpCommand : public ICommand {
+public:
+	void Exec(Player& player) override;
+};
+
+class MoveDownCommand : public ICommand {
+public:
+	void Exec(Player& player) override;
+};

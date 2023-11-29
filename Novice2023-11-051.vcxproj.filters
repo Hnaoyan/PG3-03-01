@@ -35,6 +35,21 @@
     <Filter Include="KamataEngine\ヘッダーファイル\Enemy">
       <UniqueIdentifier>{6185ba2b-5f99-44db-b4ca-f8161fe4ba7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\ソースファイル\Command">
+      <UniqueIdentifier>{9d7c9e08-5bbb-4fcb-b308-c9cbeda97f17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ヘッダーファイル\Command">
+      <UniqueIdentifier>{b6c79fe3-182e-4021-8526-7073a5b57f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ヘッダーファイル\System">
+      <UniqueIdentifier>{b64ee715-515a-482d-800d-caea8e16c2d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ソースファイル\System">
+      <UniqueIdentifier>{1554f909-d7c7-4a40-9b43-8339b87411e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\ソースファイル\Enemy">
+      <UniqueIdentifier>{219f6009-8101-4dce-8c86-5951f1995c42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -59,9 +74,6 @@
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>KamataEngine\ソースファイル</Filter>
-    </ClCompile>
     <ClCompile Include="IScene.cpp">
       <Filter>KamataEngine\ソースファイル\Scene</Filter>
     </ClCompile>
@@ -74,29 +86,32 @@
     <ClCompile Include="ClearScene.cpp">
       <Filter>KamataEngine\ソースファイル\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="InputKey.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>KamataEngine\ソースファイル\Player</Filter>
     </ClCompile>
     <ClCompile Include="PlayerBullet.cpp">
       <Filter>KamataEngine\ソースファイル\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Collider.cpp">
-      <Filter>KamataEngine\ソースファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>KamataEngine\ソースファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyState.cpp">
-      <Filter>KamataEngine\ソースファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ICommand.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\ソースファイル\Command</Filter>
     </ClCompile>
     <ClCompile Include="InputHandler.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\ソースファイル\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>KamataEngine\ソースファイル\System</Filter>
+    </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>KamataEngine\ソースファイル\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>KamataEngine\ソースファイル\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>KamataEngine\ソースファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyState.cpp">
+      <Filter>KamataEngine\ソースファイル\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -171,17 +186,11 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="GameManager.h">
-      <Filter>KamataEngine\ヘッダーファイル</Filter>
-    </ClInclude>
     <ClInclude Include="TitleScene.h">
       <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="IScene.h">
       <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="InputKey.h">
-      <Filter>KamataEngine\ヘッダーファイル</Filter>
     </ClInclude>
     <ClInclude Include="StageScene.h">
       <Filter>KamataEngine\ヘッダーファイル\Scene</Filter>
@@ -195,16 +204,26 @@
     <ClInclude Include="PlayerBullet.h">
       <Filter>KamataEngine\ヘッダーファイル\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Collider.h">
-      <Filter>KamataEngine\ヘッダーファイル</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyState.h">
       <Filter>KamataEngine\ヘッダーファイル\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>KamataEngine\ヘッダーファイル\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="ICommand.h" />
-    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="ICommand.h">
+      <Filter>KamataEngine\ヘッダーファイル\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>KamataEngine\ヘッダーファイル\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="InputKey.h">
+      <Filter>KamataEngine\ヘッダーファイル\System</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>KamataEngine\ヘッダーファイル\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>KamataEngine\ヘッダーファイル\System</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
